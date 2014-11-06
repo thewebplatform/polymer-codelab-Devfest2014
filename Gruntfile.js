@@ -66,7 +66,7 @@ module.exports = function (grunt) {
     sass: {
       options: {
         sourceMap: true,
-        includePaths: ['bower_components']
+        includePaths: ['lib']
         },
       dist: {
         options: {
@@ -106,7 +106,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: ['**/*.css', '!bower_components/**/*.css'],
+          src: ['**/*.css', '!lib/**/*.css'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -239,7 +239,7 @@ module.exports = function (grunt) {
             'elements/**',
             '!elements/**/*.scss',
             'images/{,*/}*.{webp,gif}',
-            'bower_components/**'
+            'lib/**'
           ]
         }]
       },
