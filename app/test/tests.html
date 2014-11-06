@@ -1,7 +1,7 @@
 <link rel="import"
-  href="../lib/polymer-test-tools/tools.html">
+  href="../bower_components/polymer-test-tools/tools.html">
 
-<script src="../lib/polymer-test-tools/mocha-htmltest.js">
+<script src="../bower_components/polymer-test-tools/mocha-htmltest.js">
 </script>
 
 <script>
@@ -11,10 +11,15 @@
   // Below is a set of sample element test suites.
   // Replace these with your own suites of tests.
 
-  htmlSuite('<name-of-element>', function() {
-//    htmlTest('<name-of-element>.html');
+  htmlSuite('yo-greeting', function() {
+    htmlTest('yo-greeting-basic.html');
   });
 
+  htmlSuite('yo-list', function() {
+    htmlTest('yo-list-basic.html');
+  });
+
+  // End sample test suites
 
   mocha.run();
 
