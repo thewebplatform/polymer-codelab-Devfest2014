@@ -3,12 +3,25 @@ body {
   font-weight: 300;
 }
 
+h1 {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+h3 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+h4 {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+core-scaffold /deep/ core-item,
 body /deep/ core-toolbar {
   background-color: #03a9f4;
   color: #fff;
-}
-
-core-menu {
-  color: #01579b;
-  margin: 10px 0 0 0;
 }
