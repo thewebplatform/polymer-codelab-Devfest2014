@@ -12,7 +12,7 @@ A [Polymer](http://polymer-project.org) CodeLab
 - **Sponsors** [*The Web Platform Podcast*](http://thewebplatform.libsyn.com)
 
 ### Summary
-Roughly based on Eric Bidelman's
+Roughly based on Eric Bidelman's [SPA Tutorial[(https://www.polymer-project.org/articles/spa.html) on the Polymer Project web application. 
 
 > This is a section with blocking...
 
@@ -29,37 +29,51 @@ Before attending this codelab you will need to do some preparation and have some
 - Bower basics
 - NPM basics
 
-#### Download files locally and install dependencies!
-In the event we have wifi issues at the codelab, you will need to have access to local files and have dependencies preloaded. We will allocate some time for fixes & problems but you need to be as prepped as possible.
-
+#### DOWNLOAD ALL DEPENDENCIES PRIOR TO THE CODELAB!
+In the event we have wifi issues at the codelab, you will need to have access to local files and have dependencies preloaded. We will allocate some time for fixes & problems but you need to be as prepped as possible. To get the files you need you must clone the repository using git and install its dependencies.
 
 ##### Git
-
+Of course you could start a Polymer Application from scratch if you like using the `yo polymer` command for the [Yeoman Generator 'generator-polymer` npm module](https://github.com/yeoman/generator-polymer) which is what we did for this codelab but because you will be going through a step by step process you will need to clone the repository to get the benefits of the step by step process.  
 
 ```sh
-git clone [git-repo-url] polymer-codelab-Devfest2014
+git clone https://github.com/thewebplatform/polymer-codelab-Devfest2014.git polymer-codelab-Devfest2014
 cd polymer-codelab-Devfest2014
 ```
-
+Install all NPM & Bower application dependencies 
 ##### NPM (Node Package Manager)
 ```sh
 npm install -g bower
-npm install -g gulp
+npm install -g grunt-cli
 npm install
 ```
 
 ##### Bower
 ```sh
-bower install --recursive
+bower install
 ```
 
-##### Run the Server^
+##### Run the Server
 ```sh
-gulp serve
+grunt serve
 ```
 
 ### Instructions
-### Next Steps
-### Reources
+You can view any completed section of the tutorial using `git checkout step-?`. To see the difference between any two steps, use the `git diff` command.
+ 
+ `git diff step-?..step-?`
 
-* [Eric Bidelman's Tutorial on Polymer SPA Creation](https://www.polymer-project.org/articles/spa.html) - helpful link for assistance or further reading
+##### Step 0 : Application Structure
+The first few steps in this codelab are to get the basic elements we need to scaffold our single page application. 
+```sh
+git checkout -f step-0
+```
+##### Step 1 : Toolbar
+##### Step 2 : Main Content Sections
+##### Step 3 : Views & Data Binding
+##### Step 4 : Navigation & Routing
+##### Step 5 : Keyboard Navigation
+##### Step 6 : Loading Dynamic Content 
+##### Stey 7 : Finishing Touches
+
+### Next Steps
+### Resources
