@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild-->
 
-  <script src="lib/platform/platform.js"></script>
+  <script src="lib/webcomponentsjs/webcomponents.js"></script>
   <link rel="import" href="lib/core-toolbar/core-toolbar.html">
   <link rel="import" href="lib/core-scaffold/core-scaffold.html">
   <!-- build:vulcanized elements/elements.vulcanized.html -->
@@ -23,9 +23,27 @@
 
 <body unresolved fullbleed>
   <core-scaffold id="scaffold">
-    <nav>Left drawer</nav>
-    <core-toolbar tool>Application</core-toolbar>
-    <div>Main content</div>
+    <nav>
+      <core-menu selected="0">
+        <paper-item icon="label-outline" label="Single">
+          <a href="#one"></a>
+        </paper-item>
+        <paper-item icon="label-outline" label="page">
+          <a href="#two"></a>
+        </paper-item>
+        <core-toolbar tool>
+          <h2 flex>My Name</h2>
+        </core-toolbar>
+      </core-menu>
+    </nav>
+    <core-toolbar tool flex right-center>
+      <core-icon-button icon="refresh"></core-icon-button>
+      <core-icon-button icon="add"></core-icon-button>
+    </core-toolbar>
+    <main layout horizontal center-center fit>
+      <!-- fill with pages -->
+    </main>
+    </core-menu>
   </core-scaffold>
 
   <!-- build:js scripts/app.js -->
