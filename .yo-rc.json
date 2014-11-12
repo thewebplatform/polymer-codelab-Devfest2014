@@ -1,5 +1,5 @@
 {
   "generator-polymer": {
-    "includeSass": true
+    "includeSass": false
   }
 }
