@@ -1,24 +1,21 @@
-body {
-  font-family: "RobotoDraft";
-  font-weight: 300;
+html,
+body,
+h1,
+h2,
+h3,
+h4 {
+  font: 300 16px/1 "RobotoDraft";
 }
 
-h1 {
-  font-size: 1.4rem;
-  font-weight: 300;
-}
-h2 {
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-h3 {
-  font-size: 1rem;
-  font-weight: 300;
-}
-h4 {
-  font-size: 0.8rem;
-  font-weight: 300;
-}
+p { line-height: 1.6 }
+
+h1 { font-size: 1.4rem; }
+
+h2 { font-size: 1.2rem; }
+
+h3 { font-size: 1rem; }
+
+h4 { font-size: 0.8rem; }
 
 core-scaffold /deep/ core-item,
 body /deep/ core-toolbar {
