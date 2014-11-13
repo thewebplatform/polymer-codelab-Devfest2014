@@ -158,11 +158,21 @@ For a Polymer to know when it should shim CSS selectors for the Shadow DOM, 'sty
 ```
 Congratulations! Hopefully you have a working application with very little coding using these elements. You can now move on to `step-1`. If for any reason you are unable to complete this step you can checkout the next step, diff the steps, or repeat this step by checking out `step-0` again.
 
-##### Step 1 : Menus & Content Areas
+##### Step 1 : Menus &amp; Content
+###### Toolbar
+###### Menu
+###### Main Content Area
+
 ##### Step 2 : Views, Routing, & Data Binding
-##### Step 3 : <a11y-keys> & Keyboard Navigation
-##### Step 4 : Dynamic Content w/ Firebase 
-##### Stey 5 : Finishing Touches
+###### Views & Routing
+- 'flatiron-director'
+###### View Transitions
+###### Keyboard Navigation &amp; Web Accessibility
+
+##### Step 3 : Dynamic Content with Firebase
+- 'firebase-login'
+- 'firebase-element'
+##### Step 4 : Finishing Touches
 
 ### Next Steps
 ### Resources
