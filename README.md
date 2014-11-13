@@ -157,13 +157,12 @@ For a Polymer to know when it should shim CSS selectors for the Shadow DOM, 'sty
 ...
 ```
 Congratulations! Hopefully you have a working application with very little coding using these elements. You can now move on to `step-1`. If for any reason you are unable to complete this step you can checkout the next step, diff the steps, or repeat this step by checking out `step-0` again.
-##### Step 1 : Menus & Items
-##### Step 2 : Main Content Sections
-##### Step 3 : Views & Data Binding
-##### Step 4 : Navigation & Routing
-##### Step 5 : Keyboard Navigation
-##### Step 6 : Loading Dynamic Content 
-##### Stey 7 : Finishing Touches
+
+##### Step 1 : Menus & Content Areas
+##### Step 2 : Views, Routing, & Data Binding
+##### Step 3 : <a11y-keys> & Keyboard Navigation
+##### Step 4 : Dynamic Content w/ Firebase 
+##### Stey 5 : Finishing Touches
 
 ### Next Steps
 ### Resources
