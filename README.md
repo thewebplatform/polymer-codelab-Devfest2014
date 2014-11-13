@@ -19,18 +19,20 @@ Before attending this codelab you will need to do some preparation and have some
 
 > ** System Requirements**
 * Node.js (v0.10.30+) & NPM installed 
-* An IDE or code editor
-* Internet Explorer 10+, Chrome latest, Firefox latest, Opera latest, or Safari latest browser
+* An IDE, code editor, or Chrome DevTools Workspace
+* An [Evergreen Browser](http://eisenbergeffect.bluespire.com/evergreen-browsers/)
+ * Internet Explorer 10+
+ * Chrome latest
+ * Firefox latest
+ * Opera latest
+ * Safari latest
 
-> **YOU NEED TO KNOW**
-* Git VCS
-* Basic JavaScript programming knowledge
-* Basic Understanding of writing HTML & CSS Code
-* Basic working knowledge of Github
+> **YOU NEED TO KNOW** the basics & working knowledge of
+ * JavaScript, HTML, & CSS
+ * Git & Github
 
 > **You SHOULD know**
-- Bower basic usage
-- NPM basic usage
+- Bower & NPM basics
 
 #### DOWNLOAD ALL DEPENDENCIES PRIOR TO THE CODELAB!
 In the event we have wifi issues at the codelab, you will need to have access to local files and have dependencies preloaded. We will allocate some time for fixes & problems but you need to be as prepped as possible. To get the files you need you must clone the repository using git and install its dependencies.
@@ -81,12 +83,9 @@ Let's talk about the components we chose and why we are using them.
 ###### [&lt;core-scaffold&gt;](https://www.polymer-project.org/docs/elements/core-elements.html#core-scaffold)
 `core-scaffold` is a responsive layout container and is meant to hold common elements in layout such as a header, toolbar, menu, title and areas for application content. 
 
-<iframe style="width:100%;height: 320px;border: solid 2px #E91E63;" href="https://www.polymer-project.org/components/core-scaffold/demo.html"></iframe>
-
 ###### [&lt;core-toolbar&gt;](https://www.polymer-project.org/docs/elements/core-elements.html#core-toolbar)
 `core-toolbar` is a horizontal bar containing items that can be used for label, navigation, search and actions. By default, these child items are placed into a horizontal center layout container inside of core-toolbar's Shadow DOM. You can use [flex attributes](https://www.polymer-project.org/docs/polymer/layout-attrs.html) to control the items' sizing. 
 
-<iframe style="width:100%;height: 320px;border: solid 2px #E91E63;" href="https://www.polymer-project.org/components/core-toolbar/demo.html"></iframe>
 ###### [&lt;font-roboto&gt;](https://www.polymer-project.org/docs/elements/core-elements.html#core-toolbar)
 `font-roboto` is simply a css `link` element that pulls in the `RobotoDraft` Google Web Font used for Google's [Material Design](http://www.google.com/design/spec/material-design/introduction.html) as seen on [Android Loillpop](http://www.android.com/versions/lollipop-5-0/) & [Polymer `paper-elements`](https://www.polymer-project.org/docs/elements/paper-elements.html).
 
