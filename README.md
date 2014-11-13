@@ -164,14 +164,17 @@ Congratulations! Hopefully you have a working application with very little codin
 ###### Main Content Area
 
 ##### Step 2 : Views, Routing, & Data Binding
+
 ###### Views & Routing
 - 'flatiron-director'
+
 ###### View Transitions
 ###### Keyboard Navigation &amp; Web Accessibility
 
 ##### Step 3 : Dynamic Content with Firebase
 - 'firebase-login'
 - 'firebase-element'
+
 ##### Step 4 : Finishing Touches
 
 ### Next Steps
