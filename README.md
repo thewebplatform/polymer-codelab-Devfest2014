@@ -12,7 +12,7 @@ A [Polymer](http://polymer-project.org) CodeLab
 - **Sponsors** [*The Web Platform Podcast*](http://thewebplatform.libsyn.com)
 
 ### Summary
-This Code Lab is based on [Eric Bidelman](https://twitter.com/ebidel)'s [SPA Tutorial](https://www.polymer-project.org/articles/spa.html) on the Polymer Project web application. In this code lab, you will create a single page application from a skeleton application using Web Components & Polymer.
+This Code Lab is based on [Eric Bidelman](https://twitter.com/ebidel)'s [SPA Tutorial](https://www.polymer-project.org/articles/spa.html) on the Polymer Project web application. In this code lab, you will create a single page application from a skeleton application using Web Components & Polymer. The application itself will be a basic wiki with information about Web Components & Resources.
 
 ### READ BEFORE YOU ATTEND!!!
 Before attending this codelab you will need to do some preparation and have some basic knowledge in a few technologies.
@@ -49,13 +49,12 @@ npm install -g bower
 npm install -g grunt-cli
 npm install
 ```
-
 ##### Bower
 ```sh
 bower install
 ```
-
-##### Run the Server
+### View What You Are Building
+Before we start, let's view what we are building
 ```sh
 grunt serve:dist
 ```
@@ -72,12 +71,72 @@ First, let's checkout the correct application state to work with.
 ```sh
 git checkout -f step-0
 ```
-##### Choose, install, & Add Layout Elements
+###### Choose, install, & Add Layout Elements
+First, we are going to add the base components we need to scaffold the project layout. Check the project structure to ensure the components and check the dependencies were added. 
 ```sh
-bower install Polymer/core-header-panel
+bower install --save Polymer/core-scaffold Polymer/core-toolbar Polymer/font-roboto 
+```
+By using `--save` you force bower to write andthe changes to its configuration file `bower.json`, thus saving your updates.
+Let's talk about the components we chose and why we are using them.
+###### [&lt;core-scaffold&gt;](https://www.polymer-project.org/docs/elements/core-elements.html#core-scaffold)
+`core-scaffold` is a responsive layout container and is meant to hold common elements in layout such as a header, toolbar, menu, title and areas for application content. 
+
+<iframe style="width:100%;height: 320px;border: solid 2px #E91E63;" href="https://www.polymer-project.org/components/core-scaffold/demo.html"></iframe>
+
+###### [&lt;core-toolbar&gt;](https://www.polymer-project.org/docs/elements/core-elements.html#core-toolbar)
+`core-toolbar` is a horizontal bar containing items that can be used for label, navigation, search and actions. By default, these child items are placed into a horizontal center layout container inside of core-toolbar's Shadow DOM. You can use [flex attributes](https://www.polymer-project.org/docs/polymer/layout-attrs.html) to control the items' sizing. 
+
+<iframe style="width:100%;height: 320px;border: solid 2px #E91E63;" href="https://www.polymer-project.org/components/core-toolbar/demo.html"></iframe>
+###### [&lt;font-roboto&gt;](https://www.polymer-project.org/docs/elements/core-elements.html#core-toolbar)
+`font-roboto` is simply a css `link` element that pulls in the `RobotoDraft` Google Web Font used for Google's [Material Design](http://www.google.com/design/spec/material-design/introduction.html) as seen on [Android Loillpop](http://www.android.com/versions/lollipop-5-0/) & [Polymer `paper-elements`](https://www.polymer-project.org/docs/elements/paper-elements.html).
+
+###### Build the Project and Start Watchers*
+```sh
+grunt serve
+```
+This will build the application, open your default browser, and run the app on your `localhost:9000`. As you make changes the app will watch for file changes and automatically reload itself to reflect the latest code changes.
+
+###### **note: if you want to see a production build use `grunt serve:dist to build with vulcanize*
+<br>
+###### Wire up the HTML!
+Navigate to your 'elements.html` file located in the `app/elements` directory. Add the HTML import links here (make sure you are using the correct value for the `rel` attribute to ensure the imports will be recognized)
+```html
+<link rel="import" href="../lib/font-roboto/roboto.html">
+<link rel="import" href="../lib/core-toolbar/core-toolbar.html">
+<link rel="import" href="../lib/core-scaffold/core-scaffold.html">
 ```
 
-##### Step 1 : Toolbar
+###### Add Markup
+Add `core-scaffold` and `core-toolbar` to your HTML. We are also going to add 'main' & 'nav' elements to get a holistic idea of our layout in the browser. Next add Polymer layout attributes to the elements to get easy fine tuning of the flex box layout and box model. See [Polymer's layout attribute doc's](https://www.polymer-project.org/docs/polymer/layout-attrs.html) for details on these.
+
+```html
+...
+<body unresolved fullbleed>
+  <core-scaffold id="scaffold">
+    <nav> navigation </nav>
+    <core-toolbar tool flex right-center>flexing right and centered content</core-toolbar>
+    <main layout horizontal center-center fit> main content area </main>
+  </core-scaffold>
+  ...
+```
+###### Style Global CSS
+Update the 'body` and 'h*' element rules so that all elements will use 'RobotoDraft' font instead of 'Arial'.
+```css
+...
+h3,
+h4 {
+  font: 300 16px/1 "RobotoDraft";
+}
+...
+Next you'll use a new css selector for Shadow DOM to pierce through all shadow roots within the document body and colorize all 'core-toolbars'. '/deep/' is a powerful selector so be careful using it. Also keep in mind that, as of writing this, many css preprocessors still do not support this syntax.   
+```
+```css
+body /deep/ core-toolbar {
+  background-color: #03a9f4;
+  color: #fff;
+}
+```
+##### Step 1 : Menus & Items
 ##### Step 2 : Main Content Sections
 ##### Step 3 : Views & Data Binding
 ##### Step 4 : Navigation & Routing
