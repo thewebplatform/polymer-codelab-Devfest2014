@@ -56,11 +56,11 @@ npm install
 bower install
 ```
 ### View What You Are Building
-Before we start, let's view what we are building
+Before we start, let's view what we are building by running the server and seeing the application.
 ```sh
 grunt serve:dist
 ```
-
+Next check out the app structure. In particular, view the app folder. That is where most of the app gets updated. This is the current way Google suggests you structure Polymer apps.
 ### Instructions
 You can view any completed section of the tutorial using `git checkout step-?`. To see the difference between any two steps, use the `git diff` command.
  
@@ -156,6 +156,7 @@ For a Polymer to know when it should shim CSS selectors for the Shadow DOM, 'sty
 <link rel="stylesheet" href="styles/main.css" shim-shadowdom>
 ...
 ```
+Congratulations! Hopefully you have a working application with very little coding using these elements. You can now move on to `step-1`. If for any reason you are unable to complete this step you can checkout the next step, diff the steps, or repeat this step by checking out `step-0` again.
 ##### Step 1 : Menus & Items
 ##### Step 2 : Main Content Sections
 ##### Step 3 : Views & Data Binding
