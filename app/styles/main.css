@@ -17,8 +17,11 @@ h3 { font-size: 1rem; }
 
 h4 { font-size: 0.8rem; }
 
-core-scaffold /deep/ core-item,
 body /deep/ core-toolbar {
   background-color: #03a9f4;
   color: #fff;
+}
+
+polymer-next-selector {
+  content: 'body /deep/ core-toolbar';
 }

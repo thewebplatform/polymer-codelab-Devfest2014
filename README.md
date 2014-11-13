@@ -131,10 +131,31 @@ h4 {
 Next you'll use a new css selector for Shadow DOM to pierce through all shadow roots within the document body and colorize all 'core-toolbars'. '/deep/' is a powerful selector so be careful using it. Also keep in mind that, as of writing this, many css preprocessors still do not support this syntax.   
 ```
 ```css
+...
 body /deep/ core-toolbar {
   background-color: #03a9f4;
   color: #fff;
 }
+```
+###### Add Shadow DOM CSS Shims
+In your 'main.css' file add 'polymer-next-selector' css selector. This will simulate Shadow DOM styling for browsers that do not have native implementations od Shadow DOM CSS Selectors.
+```css
+...
+body /deep/ core-toolbar {
+  background-color: #03a9f4;
+  color: #fff;
+}
+
+polymer-next-selector {
+  content: 'body /deep/ core-toolbar';
+}
+```
+For a Polymer to know when it should shim CSS selectors for the Shadow DOM, 'style' and 'link' tags require a 'shim-shadowdom' atrribute. No value is required. Add this attribute in your 'index.html' file on the link tag for 'main.css'.
+
+```html
+...
+<link rel="stylesheet" href="styles/main.css" shim-shadowdom>
+...
 ```
 ##### Step 1 : Menus & Items
 ##### Step 2 : Main Content Sections
