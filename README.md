@@ -158,11 +158,40 @@ For a Polymer to know when it should shim CSS selectors for the Shadow DOM, 'sty
 ```
 Congratulations! Hopefully you have a working application with very little coding using these elements. You can now move on to `step-1`. If for any reason you are unable to complete this step you can checkout the next step, diff the steps, or repeat this step by checking out `step-0` again.
 
-##### Step 1 : Menus &amp; Content
-###### Toolbar
-###### Menu
+##### Step 1 : Components &amp; Content
+In 'step-o' we added our layout elements and base font. Next lets get some navigation going. For our navigation we are going
+to compose two components together. These are 'core-menu' and 'paper-item'.
+Let's take a closer look at these to see why we are going to select these elements over some others.
+
+###### ['&lt;core-menu&gt;'](https://www.polymer-project.org/docs/elements/core-elements.html#core-menu)
+'core-menu' is a simple element that styles to look like a menu. We will use this for our navigation because of it's simple design
+and built in functionality for selections within the list.
+
+###### ['&lt;paper-item&gt;'](https://www.polymer-project.org/docs/elements/core-elements.html#core-menu)
+'paper-item'
+
+Before we begin, checkout the correct application state to work with.
+```sh
+git checkout -f step-1
+```
+
+###### The Navigation Drawer
+```html
+
+```
+
 ###### Main Content Area
 
+It can be overwhelming to try to build all of the components out there and it's nice to have predefined & composable community
+components like Polymer's ['core-elements'](https://www.polymer-project.org/docs/elements/core-elements.html) &
+['paper-elements'](https://www.polymer-project.org/docs/elements/paper-elements.html) (The Polymer component implementation of
+Google's Material Design) that have been 'battle-hardened' & thoroughly tested.
+Another great resource for finding components out there that are not just Polymer but any flavor is [customelements.io](http://customelements.io/).
+[Zeno Rocha](https://twitter.com/zenorocha) does a great job maintaining this project that is essentially a community
+driven list of web components. When creating your own elements that you want on customelements.io, [webcomponents.org](http://webcomponents.org)'s
+'generator-element' repository helps developers get going. These tools are not covered in this codelab but definitely
+check them out if you want to build a web component of your own. There may be one out there already that fits great for
+you and if there isn't, you can contribute to the community by creating one and sharing it.
 ##### Step 2 : Views, Routing, & Data Binding
 
 ###### Views & Routing
@@ -178,4 +207,43 @@ Congratulations! Hopefully you have a working application with very little codin
 ##### Step 4 : Finishing Touches
 
 ### Next Steps
-### Resources
+
+##### Deploy your application
+You can deploy your static applications for free using some of these services or deploy the app to any hosting platform of your choosing
+###### [Firebase Hosting](https://www.firebase.com/docs/hosting/)
+Firebase not only has its Realtime data product but also has static application hosting available. Projects start free of cost so check it out. We use the free hosting for personal projects & prototyping static apps when Divshot or AWS is not an option.
+###### [Divshot](https://divshot.com/)
+This was the first static hosting platform I was introduced to. A few of us from [The Web Platform Podcast](http://thewebplatform.libsyn.com) used this robust static app hosting solution for the Static Showdown hackathon. It is still the most full featured and innovative platform specifically designed for Static Applications. And no....we aren't paid to say that :)
+##### Build Components, Share, &amp; Contribute
+- [ele.io Online Web Component Playground](https://ele.io/)
+- [codepen.io Online Code Sharing Tool](http://codepen.io)
+- ['generator-element'](https://github.com/webcomponents/generator-element)
+- ['generator-polymer'](https://github.com/yeoman/generator-polymer)
+- ['generator-brick'](https://github.com/mozbrick/generator-brick)
+- [The Static Showdown Hackathon](http://www.staticshowdown.com/)
+- [itshackademic.com](http://itshackademic.com)
+
+##### Research The Libraries & Frameworks
+
+- [The Bosonic Project](https://bosonic.github.io/)
+- [x-tag](http://www.x-tags.org/)
+- [Mozilla Brick.io](http://mozbrick.github.io/)
+- [The Polymer Project](http://polymer-project.org)
+- [Polymer.dart](https://www.dartlang.org/polymer/)
+
+##### Explore Online Learning Resources
+- [Bower](http://bower.io) (search 'web-components')
+- [Component Kitchen](http://component.kitchen/)
+- [customelements.io](http://customelements.io/)
+- [Built With Polymer](http://builtwithpolymer.org/)
+- [webcomponents.org](http://webcomponents.org/)
+- [Web Components LinkedIn Group](https://www.linkedin.com/groups?home=&gid=5187485&trk=my_groups-tile-grp)
+- [Web Components Google Plus Community](https://plus.google.com/u/0/communities/113308949212527149307)
+- [Polymer Google Group](https://groups.google.com/forum/#!forum/polymer-dev)
+- [Polymer Google Google Plus Community](https://plus.google.com/u/0/communities/115626364525706131031)
+- [The Official Polymer Blog](https://blog.polymer-project.org)
+- [Divshot's Blog](https://divshot.com/blog/categories/web-components/)
+- [Chris Strom's Blog](http://japhr.blogspot.com/)
+- [Polycasts Youtube Playlist](https://www.youtube.com/watch?v=jrt7sMq9lO0&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
+- [Web Components Stackoverflow](http://stackoverflow.com/search?q=web-components)
+- [Polymer Stackoverflow](http://stackoverflow.com/search?q=polymer)
