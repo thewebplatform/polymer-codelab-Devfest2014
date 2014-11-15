@@ -176,9 +176,48 @@ git checkout -f step-1
 ```
 
 ###### The Navigation Drawer
+Let's build a navigation drawer with a toolbar at the top. Below the toolbar, we will put a menu with a few list items and links inside.
+Additionally, we want it to be responsive, contain animated actions, and control the application.
+navigation system.
+
+Install our elements
+```sh
+bower install --save Polymer/paper-item Polymer/core-menu
+```
+
+Add the elements to elements.html
 ```html
+<link rel="import" href="../lib/core-scaffold/core-scaffold.html">
+
+<link rel="import" href="../lib/core-menu/core-menu.html">
+<link rel="import" href="../lib/paper-item/paper-item.html">
 
 ```
+
+Next add the 'core-menu' element
+
+```html
+...
+<nav>
+  <core-menu></core-menu>
+</nav>
+...
+```
+
+Throw in a few of the 'paper-item' elements inside the 'core-menu'.
+```html
+...
+<nav>
+  <core-menu>
+    <paper-item></paper-item>
+    <paper-item></paper-item>
+    <paper-item></paper-item>
+    <paper-item></paper-item>
+  </core-menu>
+</nav>
+...
+```
+
 
 ###### Main Content Area
 
@@ -192,6 +231,7 @@ driven list of web components. When creating your own elements that you want on 
 'generator-element' repository helps developers get going. These tools are not covered in this codelab but definitely
 check them out if you want to build a web component of your own. There may be one out there already that fits great for
 you and if there isn't, you can contribute to the community by creating one and sharing it.
+
 ##### Step 2 : Views, Routing, & Data Binding
 
 ###### Views & Routing
