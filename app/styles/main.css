@@ -22,6 +22,24 @@ body /deep/ core-toolbar {
   color: #fff;
 }
 
+core-selector {
+  color: #01579b;
+  margin: 10px 0 0 0;
+}
+
+core-selector a {
+ text-decoration: none;
+ color: #01579b;
+}
+
+core-selector a:hover {
+ text-decoration: underline;
+}
+
+nav core-toolbar {
+  font-size: 1.2em;
+}
+
 polymer-next-selector {
   content: 'body /deep/ core-toolbar';
 }

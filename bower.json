@@ -6,7 +6,9 @@
     "core-toolbar": "Polymer/core-toolbar#~0.5.1",
     "core-scaffold": "Polymer/core-scaffold#~0.5.1",
     "webcomponentsjs": "Polymer/webcomponentsjs#~0.5.1",
-    "font-roboto": "Polymer/font-roboto#~0.5.1"
+    "font-roboto": "Polymer/font-roboto#~0.5.1",
+    "paper-item": "Polymer/paper-item#~0.5.1",
+    "core-menu": "Polymer/core-menu#~0.5.1"
   },
   "devDependencies": {
     "polymer-test-tools": "Polymer/polymer-test-tools#~0.5.1"

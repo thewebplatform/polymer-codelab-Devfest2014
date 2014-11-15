@@ -21,7 +21,23 @@
 
 <body unresolved fullbleed>
   <core-scaffold id="scaffold">
-    <nav> navigation </nav>
+    <nav>
+      <core-toolbar center horizontal layout>Web Components &amp; Polymer</core-toolbar>
+      <core-selector selected="0">
+        <paper-item recenteringTouch="true" center horizontal layout>
+          <a href="#summary">Summary</a>
+        </paper-item>
+        <paper-item recenteringTouch="true" center horizontal layout>
+          <a href="#components">Components</a>
+        </paper-item>
+        <paper-item recenteringTouch="true" center horizontal layout>
+          <a href="#libraries">Libraries</a>
+        </paper-item>
+        <paper-item recenteringTouch="true" center horizontal layout>
+          <a href="#resources">Resources</a>
+        </paper-item>
+      </core-selector>
+    </nav>
     <core-toolbar tool flex right-center>flexing right and centered content</core-toolbar>
     <main layout horizontal center-center fit> main content area </main>
   </core-scaffold>
