@@ -43,7 +43,16 @@
       <core-icon-button icon="refresh"></core-icon-button>
     </core-toolbar>
     <main layout horizontal center-center fit>
-      main content area
+      <core-animated-pages  selected="0" transitions="slide-from-right">
+
+        <section layout vertical center-center>
+          first page
+        </section>
+        <section layout vertical center-center>
+          second page
+        </section>
+
+      </core-animated-pages>
     </main>
   </core-scaffold>
 

@@ -43,3 +43,11 @@ nav core-toolbar {
 polymer-next-selector {
   content: 'body /deep/ core-toolbar';
 }
+
+core-animated-pages {
+  width: 85%;
+  min-height: 85%;
+  -webkit-user-select: none;
+  background-color: #fff;
+  overflow-x: hidden;
+}

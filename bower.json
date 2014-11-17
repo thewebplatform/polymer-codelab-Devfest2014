@@ -9,7 +9,8 @@
     "font-roboto": "Polymer/font-roboto#~0.5.1",
     "paper-item": "Polymer/paper-item#~0.5.1",
     "core-menu": "Polymer/core-menu#~0.5.1",
-    "core-icon-button": "Polymer/core-icon-button#~0.5.1"
+    "core-icon-button": "Polymer/core-icon-button#~0.5.1",
+    "core-animated-pages": "Polymer/core-animated-pages#~0.5.1"
   },
   "devDependencies": {
     "polymer-test-tools": "Polymer/polymer-test-tools#~0.5.1"
