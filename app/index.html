@@ -18,47 +18,46 @@
   </head>
 
   <body unresolved fullbleed>
-    <template is="auto-binding">
+    <template is="auto-binding" id="is-auto-bound">
+
       <core-scaffold id="scaffold">
-        <nav>
+        <nav layout vertical>
 
-          <core-toolbar center horizontal layout>Web Components &amp; Polymer</core-toolbar>
+            <core-toolbar center horizontal layout>Web Components &amp; Polymer</core-toolbar>
 
-          <core-selector valueattr="hash" selected="{{route}}">
+            <core-selector valueattr="hash" selected="{{selectedIndex}}">
 
-            <template repeat="{{page in pages}}">
-              <paper-item aria-label="{{page.name}}"
-                          hash="{{page.hash}}"
-                          recenteringTouch="true"
-                          center horizontal layout>
-                <a href="#{{page.hash}}">{{page.hash}}</a>
-              </paper-item>
+              <template repeat="{{page in pages}}">
 
-            </template>
+                <paper-item
+                            layout
+                            on-tap="{{setRoute}}"
+                            hash="{{page.hash}}"
+                            recenteringTouch="true">
+                   {{page.hash}}
+                </paper-item>
 
-          </core-selector>
+              </template>
+
+            </core-selector>
+
         </nav>
-
-        <core-toolbar tool flex right-center>
+        <header tool horizontal center layout>
           <h1 flex>Polymer CodeLab SPA</h1>
-          <core-icon-button role="button" icon="refresh"></core-icon-button>
-        </core-toolbar>
+        </header>
 
         <main layout horizontal center-center fit>
 
-          <core-animated-pages valueattr="hash"
-                               selected="{{route}}"
-                               transitions="slide-from-right">
+            <app-router core-animated-pages transitions="slide-from-right">
+              <!--<template repeat="page in pages">-->
+                <!--<app-route path="{{page.hash}}" import="{{page.url}}"></app-route>-->
+              <!--</template>-->
+              <app-route path="/libraries" import="/views/libraries-page.html"></app-route>
+              <app-route path="/resources" import="/views/resources-page.html"></app-route>
+              <app-route path="/components" import="/views/components-page.html"></app-route>
+              <app-route path="/summary" import="/views/summary-page.html"></app-route>
 
-            <template repeat="{{page in pages}}">
-
-              <section hash="{{page.hash}}" layout vertical center-center>
-                <h3>{{page.name}}</h3>
-              </section>
-
-            </template>
-
-          </core-animated-pages>
+            </app-router>
 
         </main>
       </core-scaffold>

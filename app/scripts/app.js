@@ -1,18 +1,46 @@
 (function(document) {
   'use strict';
 
-  var template = document.querySelector('template[is="auto-binding"]');
+  document.querySelector('app-router').go('/summary', { replace: true });
+
+  var template = document.querySelector('#is-auto-bound');
 
   template.pages = [
-    { name: 'summary'    , hash: 'summary'},
-    { name: 'components' , hash: 'components'},
-    { name: 'libraries'  , hash: 'libraries'},
-    { name: 'resources'  , hash: 'resources' }
+    {
+      "headline" : "What are Web Components?",
+      "hash"     : "summary",
+      "url"      : "/views/summary-page.html"
+    },
+    {
+      "headline" : "Where can I find packaged Web Components?",
+      "hash"     : "components",
+      "url"      : "/views/components-page.html"
+    },
+    {
+      "headline" : "What libraries are available?",
+      "hash"     : "libraries",
+      "url"      : "/views/libraries-page.html"
+    },
+    {
+      "headline" : "Additional Resources",
+      "hash"     : "resources",
+      "url"      : "/views/resources-page.html"
+    }
   ];
 
-  document.addEventListener('polymer-ready', function() {
+  template.setRoute = function(evt){
+    var route = '/' + (evt.target).getAttribute('hash');
+    document.querySelector('app-router').go(route, { replace: true });
+  };
 
-    console.log(template);
+  template.selectedIndex = 0;
+
+  template.addEventListener('template-bound', function(e) {
+    this.route = this.route || 'summary';
+    this.selectedIndex = this.selectedIndex || 0;
+  });
+
+  document.addEventListener('polymer-ready', function() {
 
   });
 
