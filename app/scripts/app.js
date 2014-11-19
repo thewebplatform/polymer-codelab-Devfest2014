@@ -1,9 +1,19 @@
 (function(document) {
   'use strict';
 
+  var template = document.querySelector('template[is="auto-binding"]');
+
+  template.pages = [
+    { name: 'summary'    , hash: 'summary'},
+    { name: 'components' , hash: 'components'},
+    { name: 'libraries'  , hash: 'libraries'},
+    { name: 'resources'  , hash: 'resources' }
+  ];
+
   document.addEventListener('polymer-ready', function() {
-    // Perform some behaviour
-    console.log('Polymer is ready to rock!');
+
+    console.log(template);
+
   });
 
 // wrap document so it plays nice with other libraries
