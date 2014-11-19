@@ -20,7 +20,7 @@
   <body unresolved fullbleed>
     <template is="auto-binding" id="is-auto-bound">
       <core-a11y-keys target="{{parentElement}}"
-                      keys="up down left right space space+shift"
+                      keys="1 2 3 4"
                       on-keys-pressed="{{keyHandler}}"></core-a11y-keys>
       <core-scaffold id="scaffold">
         <nav layout vertical>
@@ -33,7 +33,7 @@
 
                 <paper-item
                             layout
-                            on-tap="{{setRoute}}"
+                            on-tap="{{routeMe}}"
                             hash="{{page.hash}}"
                             recenteringTouch="true">
                    {{page.hash}}

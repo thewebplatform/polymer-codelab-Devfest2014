@@ -1,9 +1,11 @@
 (function(document) {
   'use strict';
 
-  document.querySelector('app-router').go('/summary', { replace: true });
+  var template = document.querySelector('#is-auto-bound')
+    , router = document.querySelector('app-router')
+    ;
 
-  var template = document.querySelector('#is-auto-bound');
+  router.go('/summary', { replace: true });
 
   template.pages = [
     {
@@ -28,10 +30,16 @@
     }
   ];
 
-  template.setRoute = function(evt){
-    var route = '/' + (evt.target).getAttribute('hash');
-    if(('#' + route) !== window.location.hash){
-      document.querySelector('app-router').go(route);
+  template.routeMe = function(evt){
+    console.log((evt.target).getAttribute('hash'));
+    this.setRoute('/'+(evt.target).getAttribute('hash'));
+  };
+
+  template.setRoute = function(route) {
+    var isCurrentRoute = new RegExp(route).test(window.location.hash);
+    console.log(window.location.hash, route);
+    if(!isCurrentRoute){
+      router.go(route, { replace: true });
     }
   };
 
@@ -43,20 +51,23 @@
   });
 
   template.keyHandler = function(e, detail, sender) {
-    var pages = document.querySelector('#pages');
-
+    console.log(detail.key);
     switch (detail.key) {
-      case 'left':
-      case 'up':
-        pages.selectPrevious();
+      case "1" : {}
+        this.selectedIndex = 0;
+        this.setRoute('/summary');
         break;
-      case 'right':
-      case 'down':
-        pages.selectNext();
+      case "2":
+        this.selectedIndex = 1;
+        this.setRoute('/components');
         break;
-      case 'space':
-        detail.shift ? pages.selectPrevious() : pages.selectNext();
+      case "3":
+        this.selectedIndex = 2;
+        this.setRoute('/libraries');
         break;
+      case "4":
+        this.selectedIndex = 3;
+        router.go('/resources', {replace: true});
     }
   };
 
