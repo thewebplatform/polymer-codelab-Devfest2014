@@ -1,64 +1,69 @@
 <!doctype html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GDGDC DevFest 2014 Polymer Codelab</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>GDGDC DevFest 2014 Polymer Codelab</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!-- build:css styles/main.css -->
+    <script src="lib/webcomponentsjs/webcomponents.js"></script>
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css" shim-shadowdom>
+    <!-- endbuild-->
+    <!-- build:vulcanized elements/elements.vulcanized.html -->
+    <link rel="import" href="elements/elements.html">
+    <!-- endbuild-->
+  </head>
 
-  <!-- endbuild-->
+  <body unresolved fullbleed>
 
-  <script src="lib/webcomponentsjs/webcomponents.js"></script>
-  <!-- build:vulcanized elements/elements.vulcanized.html -->
-  <link rel="stylesheet" href="styles/main.css" shim-shadowdom>
-  <link rel="import" href="elements/elements.html">
-  <!-- endbuild-->
-</head>
+      <core-scaffold id="scaffold">
+        <nav>
 
-<body unresolved fullbleed>
-  <core-scaffold id="scaffold">
-    <nav>
-      <core-toolbar center horizontal layout>Web Components &amp; Polymer</core-toolbar>
-      <core-selector selected="0">
-        <paper-item recenteringTouch="true" center horizontal layout>
-          <a href="#summary">Summary</a>
-        </paper-item>
-        <paper-item recenteringTouch="true" center horizontal layout>
-          <a href="#components">Components</a>
-        </paper-item>
-        <paper-item recenteringTouch="true" center horizontal layout>
-          <a href="#libraries">Libraries</a>
-        </paper-item>
-        <paper-item recenteringTouch="true" center horizontal layout>
-          <a href="#resources">Resources</a>
-        </paper-item>
-      </core-selector>
-    </nav>
-    <core-toolbar tool flex right-center>
-      <div flex>Polymer CodeLab SPA</div>
-      <core-icon-button icon="refresh"></core-icon-button>
-    </core-toolbar>
-    <main layout horizontal center-center fit>
-      <core-animated-pages  selected="0" transitions="slide-from-right">
+          <core-toolbar center horizontal layout>Web Components &amp; Polymer</core-toolbar>
 
-        <section layout vertical center-center>
-          first page
-        </section>
-        <section layout vertical center-center>
-          second page
-        </section>
+          <core-selector selected="0">
+            <paper-item recenteringTouch="true" center horizontal layout>
+              <a href="#summary">Summary</a>
+            </paper-item>
+            <paper-item recenteringTouch="true" center horizontal layout>
+              <a href="#components">Components</a>
+            </paper-item>
+            <paper-item recenteringTouch="true" center horizontal layout>
+              <a href="#libraries">Libraries</a>
+            </paper-item>
+            <paper-item recenteringTouch="true" center horizontal layout>
+              <a href="#resources">Resources</a>
+            </paper-item>
+          </core-selector>
+        </nav>
 
-      </core-animated-pages>
-    </main>
-  </core-scaffold>
+        <core-toolbar tool flex right-center>
+          <h1 flex>Polymer CodeLab SPA</h1>
+          <core-icon-button role="button" icon="refresh"></core-icon-button>
+        </core-toolbar>
 
-  <!-- build:js scripts/app.js -->
-  <script src="scripts/app.js"></script>
-  <!-- endbuild-->
-</body>
+        <main layout horizontal center-center fit>
+          <core-animated-pages  selected="0" transitions="slide-from-right">
+
+            <section layout vertical center-center>
+              first page
+            </section>
+
+            <section layout vertical center-center>
+              second page
+            </section>
+
+          </core-animated-pages>
+        </main>
+      </core-scaffold>
+
+      <!-- build:js scripts/app.js -->
+      <script src="scripts/app.js"></script>
+      <!-- endbuild-->
+
+  </body>
 
 </html>
