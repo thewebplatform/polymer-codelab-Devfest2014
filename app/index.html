@@ -19,7 +19,9 @@
 
   <body unresolved fullbleed>
     <template is="auto-binding" id="is-auto-bound">
-
+      <core-a11y-keys target="{{parentElement}}"
+                      keys="up down left right space space+shift"
+                      on-keys-pressed="{{keyHandler}}"></core-a11y-keys>
       <core-scaffold id="scaffold">
         <nav layout vertical>
 

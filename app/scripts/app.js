@@ -30,7 +30,9 @@
 
   template.setRoute = function(evt){
     var route = '/' + (evt.target).getAttribute('hash');
-    document.querySelector('app-router').go(route, { replace: true });
+    if(('#' + route) !== window.location.hash){
+      document.querySelector('app-router').go(route);
+    }
   };
 
   template.selectedIndex = 0;
@@ -39,6 +41,24 @@
     this.route = this.route || 'summary';
     this.selectedIndex = this.selectedIndex || 0;
   });
+
+  template.keyHandler = function(e, detail, sender) {
+    var pages = document.querySelector('#pages');
+
+    switch (detail.key) {
+      case 'left':
+      case 'up':
+        pages.selectPrevious();
+        break;
+      case 'right':
+      case 'down':
+        pages.selectNext();
+        break;
+      case 'space':
+        detail.shift ? pages.selectPrevious() : pages.selectNext();
+        break;
+    }
+  };
 
   document.addEventListener('polymer-ready', function() {
 
